@@ -18,7 +18,7 @@
     var myApp = angular.module('myAppNameSpace', []);
 
     // create the controller and inject Angular's $scope
-    myApp.controller('mainController', function($scope) {
+    myApp.controller('mainController', function($scope, $window) {
 
     // create a message to display in our view
     $scope.radLinks = [
@@ -81,6 +81,11 @@
     ];
 
 
+    // open the clicked URL in a new tab
+    $scope.openPage = function(i){
+        $window.open($scope.radLinks[i].url, '_blank');
+    };
+
 
     });
 
@@ -98,23 +103,23 @@
 
 
 
-<div class="container">
-      <div class="panel panel-default" ng-repeat="link in radLinks">
-          <div class="panel-body">
-            <h3>{{link.title}}</h3>
-            <p>{{link.date}}</p>
-            <p>{{link.description}}</p>
-           <a ng-href="link.url">  {{link.url}}</a>
+    <div class="container">
+          <div class="panel panel-default" ng-repeat="link in radLinks">
+              <div class="panel-body">
+                <h3>{{link.title}}</h3>
+                <p>{{link.date}}</p>
+                <p>{{link.description}}</p>
+               <a ng-href="link.url" target="_blank" ng-click="openPage($index)"> {{link.url}}</a>
+              </div>
           </div>
-      </div>
-</div>
+    </div>
 
 
 
     
-      <div class="footer" style="text-align: center;">
-        <p><span class="glyphicon glyphicon-flash"></span></p>
-      </div>
+    <div class="footer" style="text-align: center;">
+      <p><span class="glyphicon glyphicon-flash"></span></p>
+    </div>
 
  </body>
  </html>
