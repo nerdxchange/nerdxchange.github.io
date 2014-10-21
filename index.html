@@ -17,193 +17,198 @@
     // create the module and name it myApp
     var myApp = angular.module('myAppNameSpace', []);
 
+
+    myApp.service('RadLinks', function(){
+      var radLinks = [
+          // Keep the newer ones at the top!
+
+
+          {
+            "date": "2014/10/20", 
+            "title":"Swift for iOS and OS X Apps", 
+            "keywords":["iOS"],
+            "description":"Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C", 
+            "url":"https://developer.apple.com/swift/",
+            "author":"bw"
+          },
+          {
+            "date": "2014/10/19", 
+            "title":"Ionicframework - Cordova (aka PhoneGap)", 
+            "keywords":["Ionicframework", "PhoneGap", "Cordova", "Android", "iOS"],
+            "description":"Just made my first Android app with this and it worked like a charm!", 
+            "url":"http://ionicframework.com/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/17", 
+            "title":"Introducing the Mapbox Surface API", 
+            "keywords":["Mapbox"],
+            "description":"This new feature from Mapbox looks pretty cool. I can totally see a use with app that you want to see elevation profiles like marathon races or just to use to find the lowest elevation profiles, or heighest, while biking", 
+            "url":"https://www.mapbox.com/blog/introducing-the-surface-api/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/17", 
+            "title":"Connecting to a databases using Object-Relational Mapping and NodeJS", 
+            "keywords":["Database Connection", "ORM", "Tut", "NodeJS", "ExpressJS"],
+            "description":"Tutorial on how to connect to multiple types of databases using ORM and NodeJS/ExpressJS app", 
+            "url":"http://www.sitepoint.com/getting-started-bookshelf-js/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/17", 
+            "title":"Connecting to a MongoDB via NodeJS", 
+            "keywords":["MongoDB", "NodeJS", "Video Tut"],
+            "description":"Great tutorial on how to connect to a mongoDB database with NodeJS and Mongojs dependencies", 
+            "url":"https://www.youtube.com/watch?v=j0mUoe8eghc&feature=youtu.be&noredirect=1",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/17", 
+            "title":"Prototypes in JavaScript", 
+            "keywords":["JavaScript"],
+            "description":"When you define a function within JavaScript, it comes with a few pre-defined properties; one of these is the illusive prototype. This article details what it is, and why you should use it in your projects", 
+            "url":"http://code.tutsplus.com/tutorials/prototypes-in-javascript--net-24949",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/17", 
+            "title":"Sizeup for Mac OSX", 
+            "keywords":["Utility", "Mac"],
+            "description":"SizeUp allows you to quickly resize and position your windows with keyboard shortcuts or a handy menu bar icon. I could not function without this little tool", 
+            "url":"http://www.irradiatedsoftware.com/sizeup/",
+            "author":"bw"
+          },
+          {
+            "date": "2014/10/17", 
+            "title":"Password Manager for Mac OSX/IOS", 
+            "keywords":["Password", "Utility", "Mac"],
+            "description":"I can not recomend any tool more that this one. This tool has saved my life so many times. If your not using dashline to manage all you website passowrds then your doing it wrong...", 
+            "url":"https://www.dashlane.com/",
+            "author":"bw"
+          },
+          {
+            "date": "2014/10/16", 
+            "title":"AngularJS Best Practices: Directory Structure", 
+            "keywords":["AngularJS", "Best Practices"],
+            "description":"As your projects get bigger Directory Structure is important. After playing around with AngularJS app with others it's far more maintainable to go against the Standard Structure and move towards modularized into very specific functions", 
+            "url":"http://scotch.io/tutorials/javascript/angularjs-best-practices-directory-structure",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/16", 
+            "title":"Sublime Themes", 
+            "keywords":["Sublime Text", "Themes"],
+            "description":"Here's a link to a bunch of really cool themes for your Sublime Text Editor", 
+            "url":"http://scotch.io/bar-talk/the-best-sublime-text-3-themes-of-2014",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/16", 
+            "title":"AngularJS Book of Best Practices", 
+            "keywords":["AngularJS", "Book"],
+            "description":"Looks like a very promissing book of best practices with AngularJS", 
+            "url":"https://www.ng-book.com/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/15", 
+            "title":"NPM - Bcryptjs", 
+            "keywords":["Bcrypt", "npm"],
+            "description":"Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'. And examples of how to use it!", 
+            "url":"https://www.npmjs.org/package/bcryptjs",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/15", 
+            "title":"Password Authentication with Mongoose - Bcrypt", 
+            "keywords":["Mongodb", "Mongoose", "Bcrypt", "Password Authentication"],
+            "description":"Great tutorial on how to one-way encrypt passwords in a MongoDB database using node.bcrypt.js.", 
+            "url":"http://devsmash.com/blog/password-authentication-with-mongoose-and-bcrypt",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/15", 
+            "title":"JSON Editor", 
+            "keywords":["json", "Playground"],
+            "description":"This is a fabulous tool to mess around with json. The editor will warn you when your json is invalid and you can minify json or show json in a easier viewing style", 
+            "url":"http://www.jsoneditoronline.org/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/14", 
+            "title":"Sass Playgound - Sassmeister", 
+            "keywords":["Sass", "Playground"],
+            "description":"Sassmeister is a great place to mess around with sass and learn in the process", 
+            "url":"http://sassmeister.com/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/14", 
+            "title":"Learn some Sass Today!!", 
+            "keywords":["Sass", "Tutorial"],
+            "description":"Scotch.io has a tone of really awesome tutorials and here is yet another one! Learn some Sass and maybe learn something new if you already know Sass", 
+            "url":"http://scotch.io/tutorials/css/getting-started-with-sass",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/14", 
+            "title":"Announcing Urban Layers", 
+            "keywords":["deom"],
+            "description":"An excellent example implementation of custom vector tiles taking advantage of client side map styling, vector.pbf & d3.js. This project also features a great project overview blog", 
+            "url":"http://morphocode.com/making-urban-layers/",
+            "author":"bw"
+          },
+          {
+            "date": "2014/10/14", 
+            "title":"Airpair and learning/teaching resources", 
+            "keywords":["Learning, Teaching"],
+            "description":"Over 80+ expert panels, workshops and talks by leaders of software", 
+            "url":"https://www.airpair.com",
+            "author":"bw"
+          },
+          {
+            "date": "2014/10/14", 
+            "title":"Taking a look at FireBase", 
+            "keywords":["Backend"],
+            "description":"A powerful API to store and sync data in realtime. Why consider it: with Firebase to create three-way synchronization between Firebase and your application’s View and Model, proprietary 'scaleable' business model ~ start with free hackers account, pay when you grow. Oh, and almost forgot, to mention 'angularfire'", 
+            "url":"https://www.firebase.com/",
+            "author":"bw"
+          },
+          {
+            "date": "2014/10/13", 
+            "title":"PostGIS, Creating Overlays", 
+            "keywords":["PostGIS"],
+            "description":"Here is an example of working with PostGIS", 
+            "url":"http://boundlessgeo.com/2014/10/postgis-training-creating-overlays/",
+            "author":"pw"
+          },
+          {
+            "date": "2014/10/12", 
+            "title":"PostGIS, Training", 
+            "keywords":["PostGIS"],
+            "description":"Want some training in PostGIS?? Here's a cheap workshop", 
+            "url":"http://boundless.talentlms.com/catalog/info/id:117",
+            "author":"pw"
+          }
+          // keep the new post at the top please!
+        ];
+
+        return radLinks;
+
+    });
+
+
     // create the controller and inject Angular's $scope
-    myApp.controller('mainController', function($scope, $window) {
+    myApp.controller('mainController', function($scope, $window, RadLinks) {
 
-    // create a message to display in our view
-    $scope.radLinks = [
+      // create a message to display in our view
+      $scope.radLinks = RadLinks;
 
-        // Keep the newer ones at the top!
-//
-
-        {
-          "date": "2014/10/20", 
-          "title":"Swift for iOS and OS X Apps", 
-          "keywords":["iOS"],
-          "description":"Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C", 
-          "url":"https://developer.apple.com/swift/",
-          "author":"bw"
-        },
-        {
-          "date": "2014/10/19", 
-          "title":"Ionicframework - Cordova (aka PhoneGap)", 
-          "keywords":["Ionicframework", "PhoneGap", "Cordova", "Android", "iOS"],
-          "description":"Just made my first Android app with this and it worked like a charm!", 
-          "url":"http://ionicframework.com/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/17", 
-          "title":"Introducing the Mapbox Surface API", 
-          "keywords":["Mapbox"],
-          "description":"This new feature from Mapbox looks pretty cool. I can totally see a use with app that you want to see elevation profiles like marathon races or just to use to find the lowest elevation profiles, or heighest, while biking", 
-          "url":"https://www.mapbox.com/blog/introducing-the-surface-api/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/17", 
-          "title":"Connecting to a databases using Object-Relational Mapping and NodeJS", 
-          "keywords":["Database Connection", "ORM", "Tut", "NodeJS", "ExpressJS"],
-          "description":"Tutorial on how to connect to multiple types of databases using ORM and NodeJS/ExpressJS app", 
-          "url":"http://www.sitepoint.com/getting-started-bookshelf-js/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/17", 
-          "title":"Connecting to a MongoDB via NodeJS", 
-          "keywords":["MongoDB", "NodeJS", "Video Tut"],
-          "description":"Great tutorial on how to connect to a mongoDB database with NodeJS and Mongojs dependencies", 
-          "url":"https://www.youtube.com/watch?v=j0mUoe8eghc&feature=youtu.be&noredirect=1",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/17", 
-          "title":"Prototypes in JavaScript", 
-          "keywords":["JavaScript"],
-          "description":"When you define a function within JavaScript, it comes with a few pre-defined properties; one of these is the illusive prototype. This article details what it is, and why you should use it in your projects", 
-          "url":"http://code.tutsplus.com/tutorials/prototypes-in-javascript--net-24949",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/17", 
-          "title":"Sizeup for Mac OSX", 
-          "keywords":["Utility", "Mac"],
-          "description":"SizeUp allows you to quickly resize and position your windows with keyboard shortcuts or a handy menu bar icon. I could not function without this little tool", 
-          "url":"http://www.irradiatedsoftware.com/sizeup/",
-          "author":"bw"
-        },
-        {
-          "date": "2014/10/17", 
-          "title":"Password Manager for Mac OSX/IOS", 
-          "keywords":["Password", "Utility", "Mac"],
-          "description":"I can not recomend any tool more that this one. This tool has saved my life so many times. If your not using dashline to manage all you website passowrds then your doing it wrong...", 
-          "url":"https://www.dashlane.com/",
-          "author":"bw"
-        },
-        {
-          "date": "2014/10/16", 
-          "title":"AngularJS Best Practices: Directory Structure", 
-          "keywords":["AngularJS", "Best Practices"],
-          "description":"As your projects get bigger Directory Structure is important. After playing around with AngularJS app with others it's far more maintainable to go against the Standard Structure and move towards modularized into very specific functions", 
-          "url":"http://scotch.io/tutorials/javascript/angularjs-best-practices-directory-structure",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/16", 
-          "title":"Sublime Themes", 
-          "keywords":["Sublime Text", "Themes"],
-          "description":"Here's a link to a bunch of really cool themes for your Sublime Text Editor", 
-          "url":"http://scotch.io/bar-talk/the-best-sublime-text-3-themes-of-2014",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/16", 
-          "title":"AngularJS Book of Best Practices", 
-          "keywords":["AngularJS", "Book"],
-          "description":"Looks like a very promissing book of best practices with AngularJS", 
-          "url":"https://www.ng-book.com/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/15", 
-          "title":"NPM - Bcryptjs", 
-          "keywords":["Bcrypt", "npm"],
-          "description":"Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'. And examples of how to use it!", 
-          "url":"https://www.npmjs.org/package/bcryptjs",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/15", 
-          "title":"Password Authentication with Mongoose - Bcrypt", 
-          "keywords":["Mongodb", "Mongoose", "Bcrypt", "Password Authentication"],
-          "description":"Great tutorial on how to one-way encrypt passwords in a MongoDB database using node.bcrypt.js.", 
-          "url":"http://devsmash.com/blog/password-authentication-with-mongoose-and-bcrypt",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/15", 
-          "title":"JSON Editor", 
-          "keywords":["json", "Playground"],
-          "description":"This is a fabulous tool to mess around with json. The editor will warn you when your json is invalid and you can minify json or show json in a easier viewing style", 
-          "url":"http://www.jsoneditoronline.org/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/14", 
-          "title":"Sass Playgound - Sassmeister", 
-          "keywords":["Sass", "Playground"],
-          "description":"Sassmeister is a great place to mess around with sass and learn in the process", 
-          "url":"http://sassmeister.com/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/14", 
-          "title":"Learn some Sass Today!!", 
-          "keywords":["Sass", "Tutorial"],
-          "description":"Scotch.io has a tone of really awesome tutorials and here is yet another one! Learn some Sass and maybe learn something new if you already know Sass", 
-          "url":"http://scotch.io/tutorials/css/getting-started-with-sass",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/14", 
-          "title":"Announcing Urban Layers", 
-          "keywords":["deom "],
-          "description":"An excellent example implementation of custom vector tiles taking advantage of client side map styling, vector.pbf & d3.js. This project also features a great project overview blog", 
-          "url":"http://morphocode.com/making-urban-layers/",
-          "author":"bw"
-        },
-        {
-          "date": "2014/10/14", 
-          "title":"Airpair and learning/teaching resources", 
-          "keywords":["Learning, Teaching"],
-          "description":"Over 80+ expert panels, workshops and talks by leaders of software", 
-          "url":"https://www.airpair.com",
-          "author":"bw"
-        },
-        {
-          "date": "2014/10/14", 
-          "title":"Taking a look at FireBase", 
-          "keywords":["Backend"],
-          "description":"A powerful API to store and sync data in realtime. Why consider it: with Firebase to create three-way synchronization between Firebase and your application’s View and Model, proprietary 'scaleable' business model ~ start with free hackers account, pay when you grow. Oh, and almost forgot, to mention 'angularfire'", 
-          "url":"https://www.firebase.com/",
-          "author":"bw"
-        },
-        {
-          "date": "2014/10/13", 
-          "title":"PostGIS, Creating Overlays", 
-          "keywords":["PostGIS"],
-          "description":"Here is an example of working with PostGIS", 
-          "url":"http://boundlessgeo.com/2014/10/postgis-training-creating-overlays/",
-          "author":"pw"
-        },
-        {
-          "date": "2014/10/12", 
-          "title":"PostGIS, Training", 
-          "keywords":["PostGIS"],
-          "description":"Want some training in PostGIS?? Here's a cheap workshop", 
-          "url":"http://boundless.talentlms.com/catalog/info/id:117",
-          "author":"pw"
-        }
-
-
-        // keep the new post at the top please!
-    ];
-
-
-    // open the clicked URL in a new tab
-    $scope.openPage = function(i){
-        $window.open($scope.radLinks[i].url, '_blank');
-    };
+      // open the clicked URL in a new tab
+      $scope.openPage = function(i){
+          $window.open($scope.radLinks[i].url, '_blank');
+      };
 
 
     });
