@@ -4,6 +4,54 @@
 <html ng-app="myAppNameSpace">
 <head>
 
+  <style media="screen">
+html{
+    background-color: #333;
+}
+
+p{
+  text-align: left;
+}
+body {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: 1px;
+  font-family: 'Raleway', cursive;
+  font-weight: 100;
+  position: relative;
+  background: -webkit-linear-gradient(left, #171616, #868686, #171616);
+  background: -moz-linear-gradient(left, #171616, #868686, #171616);
+  background: -ms-linear-gradient(left, #171616, #868686, #171616);
+  background: -o-linear-gradient(left, #171616, #868686, #171616);
+}
+body:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  width: 600px;
+  margin-left: -300px;
+  margin-top: -220px;
+  height: 600px;
+  background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #444, black);
+  background: -moz-radial-gradient(50% 50%, ellipse closest-side, #444, black);
+  background: -ms-radial-gradient(50% 50%, ellipse closest-side, #444, black);
+  background: -o-radial-gradient(50% 50%, ellipse closest-side, #444, black);
+  z-index: -1;
+}
+#main {
+  margin-bottom:30px;
+  background: black;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  letter-spacing: 30px;
+  color: white;
+}
+  </style>
+
+
   <!-- load bootstrap and fontawesome via CDN -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
@@ -301,11 +349,11 @@
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController">
+<body ng-controller="mainController" style="background-color:black;">
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main" class="hero-unit">
-      <h2>The starting ground of the nerdXchange</h2>
+      <h2>The nerdXchange</h2>
     </div>
 
 
