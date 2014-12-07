@@ -4,81 +4,6 @@
 <html ng-app="myAppNameSpace">
 <head>
 
-  <style media="screen">
-html{
-    background-color: #333;
-}
-
-p{
-  text-align: left;
-}
-body {
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  padding: 1px;
-  font-family: 'Raleway', cursive;
-  font-weight: 300;
-  position: relative;
-  background: -webkit-linear-gradient(left, #171616, #868686, #171616);
-  background: -moz-linear-gradient(left, #171616, #868686, #171616);
-  background: -ms-linear-gradient(left, #171616, #868686, #171616);
-  background: -o-linear-gradient(left, #171616, #868686, #171616);
-}
-body:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -50px;
-  width: 600px;
-  margin-left: -300px;
-  margin-top: -220px;
-  height: 600px;
-  background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  background: -moz-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  background: -ms-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  background: -o-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  z-index: -1;
-}
-#main {
-  margin-bottom:30px;
-  background: black;
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  letter-spacing: 30px;
-  color: white;
-}
-p, a{
-  text-transform: none;
-}
-
-
-
-/********************************************/
-/*************** Media Queries **************/
-/********************************************/
-@media screen and (max-width: 600px) {
-    #main {
-      text-decoration: none;
-      letter-spacing: 20px;
-    }
-}
-@media screen and (max-width: 450px) {
-    #main {
-      text-decoration: none;
-      letter-spacing: 10px;
-    }
-}
-@media screen and (max-width: 350px) {
-    #main {
-      text-decoration: none;
-      letter-spacing: 0px;
-    }
-}
-  </style>
-
-
   <!-- load bootstrap and fontawesome via CDN -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
@@ -98,597 +23,171 @@ p, a{
           // Keep the newer ones at the top!
 
 
-
-
           {
-            "date": "2014/12/5",
-            "title":"More Icons",
-            "keywords":["icons"],
-            "description":"Font-Awesome has a bunch of icons that are easy to use",
-            "url":"http://fortawesome.github.io/Font-Awesome/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/12/5",
-            "title":"Open Source Icons",
-            "keywords":["icons"],
-            "description":"I've used iconic for making web app via the cordova way but you can also use their ionicons for web icons too",
-            "url":"http://ionicons.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/12/5",
-            "title":"Crypto.js",
-            "keywords":["crypto", "encryption", "crypto.js"],
-            "description":"Wanted to one-way hash some data today and i wanted it to be on the clients side. I wasn't too concerned with what the data was so used this library and it worked great. **I wouldn't use this to securely encrypt data cause the code is freely available, should encrypt your data on the server side but this did what i needed.",
-            "url":"https://code.google.com/p/crypto-js/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/12/4",
-            "title":"Mapbox docs",
-            "keywords":["Mapbox", "docs"],
-            "description":"I love mapbox, and here is a great doc on a bunch of mapping stuff!",
-            "url":"https://www.mapbox.com/foundations/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/12/4",
-            "title":"View CSS Stats for Popular Sites and Frameworks",
-            "keywords":["CSS", "Utility", "Design"],
-            "description":"Pass in a url and receive all kinds of design related information about the site ",
-            "url":"http://cssstats.com/",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/12/3",
-            "title":"Yet another utility library for JS: lo-dash",
-            "keywords":["JS", "lo-dash"],
-            "description":"If you are familiar with underscore.js you'll love lo-dash",
-            "url":"https://lodash.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/27",
-            "title":"MapboxGl Template Project",
-            "keywords":["mapboxgl", "map"],
-            "description":"Template mapboxgl project that renders a base map and some point data that has interactivity. Demo: http://mapboxgl.gobinigo.com/",
-            "url":"https://github.com/bwyss/mapboxgl-template",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/20",
-            "title":"Sublime Text SelectUntil Plugin",
-            "keywords":["Utility", "Sublime"],
-            "description":"Takes kind of a lot of keyboard combinations, but cool none the less. A sublime package that lets you expand your current selection until a specific character, regex, or char-count is encountered",
-            "url":"https://github.com/xavi-/sublime-selectuntil",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/19",
-            "title":"Hosting a site on Heroku and Nodejs",
-            "keywords":["Heroku", "Nodejs"],
-            "description":"Great simple walk thru of hosting some node/express on heroku",
-            "url":"http://scotch.io/tutorials/hosting/how-to-deploy-a-node-js-app-to-heroku",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/19",
-            "title":"Create charts and dashboards from SQL",
-            "keywords":["d3js", "Visualization"],
-            "description":"FnordMetric allows you to write SQL queries that return SVG charts rather than tables. Turning a query result into a chart is literally one line of code.",
-            "url":"http://fnordmetric.io/chartsql/",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/19",
-            "title":"d3-panel",
-            "keywords":["d3js", "Utility"],
-            "description":"Chrome browser extension d3-panel. It creates a new tab in DevTools, and allows you to send data directly from the browser console to plot and interact.",
-            "url":"http://bahmutov.calepin.co/introducing-d3-panel.html",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/18",
-            "title":"HTML5 GeoLocation from Tuts+",
-            "keywords":["HTML5", "GeoLocation"],
-            "description":"Another great blog post of using the HTML5 GeoLocation API",
-            "url":"http://code.tutsplus.com/tutorials/html5-apps-positioning-with-geolocation--mobile-456",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/18",
-            "title":"HTML5 GeoLocation",
-            "keywords":["HTML5", "GeoLocation"],
-            "description":"A great blog post of using the HTML5 GeoLocation API",
-            "url":"http://diveintohtml5.info/geolocation.html",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/14",
-            "title":"Ionic Youtube Vid",
-            "keywords":["Ionic", "Presentation"],
-            "description":"This is a very well done presentation and walk thru on developing app with Ionic",
-            "url":"http://www.youtube.com/watch?v=nh9EARpk-dc",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/14",
-            "title":"Ionic Camera Plugin",
-            "keywords":["Ionic", "Camera Plugin"],
-            "description":"Walk thru of adding the Camrea Plugin to the Ionic app",
-            "url":"http://learn.ionicframework.com/formulas/cordova-camera/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/12",
-            "title":"Sublime Text indent XML",
-            "keywords":["Sublime Text", "indent XML"],
-            "description":"Indent XML is a great Sublime Text package that works like a charm! It works with JSON too!! All you have to do is install it with the Package Control (Command+shift+P) and then after it's installed, on a mac (command+K + command+F])... format away!!",
-            "url":"http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/12",
-            "title":"Straight forward plotting built on D3 with D3xter",
-            "keywords":["d3js"],
-            "description":"Why use D3xter? Because configuration is optional, charts with sensible defaults can be generated with as little as a single line. Perfect for fast prototyping when you don't have time for getting your hands dirty.",
-            "url":"https://github.com/NathanEpstein/D3xter",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/12",
-            "title":"Launch Sublime Text from the Terminal",
-            "keywords":["Utility", "Sublime", "Terminal"],
-            "description":"Sometimes your navigating directories in the terminal, and you want to open the directory in Sublime and start hacking. Create a symlink: ln -s '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' /usr/local/bin/sublime Then you can simply run from the directory in terminal: sublime .",
-            "url":"http://ashleynolan.co.uk/blog/launching-sublime-from-the-terminal",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/11",
-            "title":"VirtualBox - IE* ",
-            "keywords":["VirtualBox", "VM", "InternetExplorer"],
-            "description":"Not that you should ever really want to develop for IE8 but if you're on a Mac and you have a client that needs to make a web app available in IE8 here is a way you can do so. Make sure to take a snapshot of your VM so that when that 30 days are up you can rollback!! If you want to have specific version of IE fire this command in Terminal: curl -s https://raw.githubusercontent.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS=\"8 9\" bash",
-            "url":"http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/10",
-            "title":"Homebrew Install - Tree ",
-            "keywords":["Homebrew", "Tree"],
-            "description":"While your searching with the Homebrew links below, install 'tree'. Tree is a recursive directory listing command that produces a depth indented listing of files, in other words it allows you to look at the sub directories and files in a tree graph visual representations!",
-            "url":"http://mama.indstate.edu/users/ice/tree/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/10",
-            "title":"Homebrew Search",
-            "keywords":["Homebrew"],
-            "description":"If you didn't like the last one, here is another way to search for packages that Homebrew provides",
-            "url":"http://braumeister.org/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/10",
-            "title":"Homebrew Search",
-            "keywords":["Homebrew"],
-            "description":"So searching for packages to install a la \"Homebrew\" is always doable via the command line with $ brew search <keyword>, however this link makes it easier to search and get description and links to the repos",
-            "url":"http://searchbrew.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/10",
-            "title":"Node.js Stream Playground",
-            "keywords":["Nodejs", "Playground", "Streams"],
-            "description":"This is a great way to learn and mess around with Nodejs streams in the browser",
-            "url":"http://nodestreams.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/07",
-            "title":"Customize the Command Line",
-            "keywords":["Terminal", "Command Line", "Customize"],
-            "description":"Customize the Command Line by Adding Emoji Icons to the Bash Prompt",
-            "url":"http://osxdaily.com/2013/04/08/add-emoji-command-line-bash-prompt/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/06",
-            "title":"AngularJS - Start using ui-router instead of ngRouter",
-            "keywords":["AngularJS", "ui-router"],
-            "description":"Ui-router does everything that ngRouter but MORE! mainly you can have nested views!",
-            "url":"https://github.com/angular-ui/ui-router",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/06",
-            "title":"Android Studio upgrading from 0.8.9 to 0.8.14 I get the error",
-            "keywords":["Android", "Android Studio"],
-            "description":"If you haven't been using Android Studio over Eclipse for your Android development, I highly recommend it. It's badass!! So I recently upgraded from 0.8.9 to 0.8.14 and got an error, this is because the sdk folder which is inside the Android Studio.app was not a good idea to begin with. All you have to do is cut and paste that SDK folder to your home directory, open a project and it will prompt you to show Android Studio where that sdk folder is on your disk. And bam your ready to keep developing!!",
-            "url":"http://stackoverflow.com/questions/26695642/android-sdk-folder-inside-the-application-folder-when-upgrading-android-studio",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/05",
-            "title":"Javascript Constructors and Prototypes",
-            "keywords":["JavaScript", "Constructors", "Prototypes"],
-            "description":"Here's a fabulous link of making sense of how/where Contructors and Prototypes work in JavaScript. I've used Prototypes a fair bit but it's since to see how it's all connected",
-            "url":"http://tobyho.com/2010/11/22/javascript-constructors-and/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/05",
-            "title":"Chrome Dev Tools",
-            "keywords":["Chrome Dev Tools", "Chrome"],
-            "description":"So i use Chrome Dev Tools on a daily bases but i have only scratched the surface of what you can do with the dev tools. Here is a fabulous resource to increase your productivity",
-            "url":"https://developer.chrome.com/devtools/docs/console",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/05",
-            "title":"Angular Leaflet/d3js Directive",
-            "keywords":["Angularjs", "JavaScript", "leafletJs", "d3js"],
-            "description":"Angular directive for integrating the leaflet-hexbin plugin for leaflet. There is also a simple leaflet - d3js version https://github.com/Asymmetrik/leaflet-d3 ",
-            "url":"https://github.com/Asymmetrik/angular-leaflet-directive-ext",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/03",
-            "title":"Build your own Yeoman Generator",
-            "keywords":["Yeoman", "JavaScript"],
-            "description":"This is a great tutorial on how to generate your own yeoman generator. It goes thru an example that you then take to some insane levels!",
-            "url":"http://code.tutsplus.com/tutorials/build-your-own-yeoman-generator--cms-20040",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/03",
-            "title":"python -m SimpleHTTPServer",
-            "keywords":["Localhost", "Utility"],
-            "description":"Navigate to a directory where you have an html index page and run 'python -m SimpleHTTPServer' for a really fast and easy localhost environment",
-            "url":"n/a",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/11/02",
-            "title":"CouchDB - Web Books",
-            "keywords":["CouchDB", "JavaScript", "NoSQL"],
-            "description":"This Weblink will give you information on how to do most of the things you need with CouchDB. CouchDB is a NoSQL and great for keeping your application front-to-back in javascript!!",
-            "url":"http://guide.couchdb.org/editions/1/en/index.html",
-            "author":"pw"
-          },
-          {
-            "date": "2014/11/01",
-            "title":"AngularJS - Services/Factory/Provider",
-            "keywords":["AngularJS", "Services", "Factory", "Provider"],
-            "description":"So dealing with the different types of Services with Angularjs seems quite confusing at first, like why the three different types and how to use them. This post does a fabulous job of explaining them and giving a good example of them all!",
-            "url":"http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/31",
-            "title":"jq",
-            "keywords":["JSON", "JSON Parser"],
-            "description":"jq is a lightweight and flexible command-line JSON processor.",
-            "url":"http://stedolan.github.io/jq/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/30",
-            "title":"Postgres - Resource",
-            "keywords":["PostgreSQL", "Database", "Resources"],
-            "description":"Here's a great resource that i use for use Postgres when i forget commands. It has a bunch of examples and is straight to the point!",
-            "url":"http://www.tutorialspoint.com/postgresql/postgresql_overview.htm",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/30",
-            "title":"MongoDB - Resource",
-            "keywords":["JavaScript", "NoSQL", "MongoDB"],
-            "description":"Here's a great resource that i use for use MongoDB when i forget commands. It has a bunch of examples and is straight to the point!",
-            "url":"http://www.tutorialspoint.com/mongodb/mongodb_overview.htm",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/29",
-            "title":"Map - Neat map on Bike Accidents",
-            "keywords":["Map"],
-            "description":"This is a neat map of bike accidents in Portland.",
-            "url":"http://youarehere.cc/p/bicycle-accidents/portland",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/28",
-            "title":"AngularJS - animations",
-            "keywords":["JavaScript", "Angularjs", "ngAnimation"],
-            "description":"More than enough information on ngAnimation.",
-            "url":"http://www.yearofmoo.com/2013/04/animation-in-angularjs.html",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/27",
-            "title":"Form validation with AngularJS",
-            "keywords":["JavaScript", "Angularjs", "Form Validation"],
-            "description":"Great post on validating forms on the client-side to make sure that the data that you post is at least complete before sending to the server",
-            "url":"http://www.ng-newsletter.com/posts/validations.html",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/27",
-            "title":"Send emails via Nodejs",
-            "keywords":["JavaScript", "Nodejs", "Node-mailer"],
-            "description":"Great framework to send emails via nodejs! make sure you read the docs cause it may work in your dev environment but if you deploy and use gmail it may Google may flag it as spam",
-            "url":"http://www.nodemailer.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/27",
-            "title":"Node-Webkit",
-            "keywords":["JavaScript", "Nodejs", "Node-Webkit"],
-            "description":"Node-Webkit enables you to write native applications with all the Web Technology you know already!",
-            "url":"https://github.com/rogerwang/node-webkit",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/26",
-            "title":"Learn Angularjs in bite size chunks!",
-            "keywords":["JavaScript", "AngularJS", "Tutorials"],
-            "description":"Egghead.io has a bunch of free tutorials and also a paid subscription to learn Angular. Buddy's motto is \"Life's too short for long boring lectures.\" and he sticks to it",
-            "url":"https://egghead.io/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/24",
-            "title":"JavaScript - Flipbook",
-            "keywords":["JavaScript", "Flipbook", "HTML5"],
-            "description":"Make a flipbook in HTML5 and JavaScript with a bunch of images with little lines of code!",
-            "url":"http://www.turnjs.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/23",
-            "title":"AngularJS: How to make a jsonp request",
-            "keywords":["AngularJS", "JSONP", "$http"],
-            "description":"Had to deal with CORS issue today because i needed an application to get resources from another server, there is a neat technique for dealing with JSONP and $http make sure that you have url has '?callback=JSON_CALLBACK' parameter",
-            "url":"http://stackoverflow.com/questions/19916362/angularjs-how-to-make-a-jsonp-request",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/23",
-            "title":"Find a Coordinate System Quickly",
-            "keywords":["GIS", "Coordinate System", "SRID", "EPSG"],
-            "description":"There are sooooo many different types of coordinate systems, here is a link that resolve having to find out what SRID or EPSG number is",
-            "url":"http://epsg.io/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/23",
-            "title":"Restore Privacy to Mac OSX Yosemite",
-            "keywords":["Mac", "security"],
-            "description":"If you've upgraded to Mac OS X Yosemite (10.10) and you're using the default settings, each time you start typing in Spotlight (to open an application or search for a file on your computer), your local search terms and location are sent to Apple and third parties (including Microsoft)",
-            "url":"https://fix-macosx.com/",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/10/22",
-            "title":"Using promises and $q to handle asynchronous calls",
-            "keywords":["JavaScript", "AngularJS", "Promise", "Deferred"],
-            "description":"Another example of dealing with multiple asynchronous functions and avoid Javascript callback hell??",
-            "url":"http://chariotsolutions.com/blog/post/angularjs-corner-using-promises-q-handle-asynchronous-calls/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/22",
-            "title":"Java​Script & Node​JS Snippets for Sublime Text",
-            "keywords":["JavaScript", "Utility"],
-            "description":"JavaScript & NodeJS Snippets for Sublime Text 2/3",
-            "url":"https://sublime.wbond.net/packages/JavaScript%20%26%20NodeJS%20Snippets",
-            "author":"bmw"
-          },
-          {
-            "date": "2014/10/21",
-            "title":"AngularJS Deferred and Promise",
-            "keywords":["JavaScript", "AngularJS", "Promise", "Deferred"],
-            "description":"You wish to synchronize multiple asynchronous functions and avoid Javascript callback hell??",
-            "url":"http://fdietz.github.io/recipes-with-angular-js/consuming-external-services/deferred-and-promise.html",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/21",
-            "title":"JavaScript constructors, prototypes, and the 'new' keyword",
-            "keywords":["JavaScript", "constructors", "prototypes"],
-            "description":"This is a great blog post on wrapping JavaScript constructors, prototypes, and the 'new' keyword all up and making sense of it all ",
-            "url":"http://pivotallabs.com/javascript-constructors-prototypes-and-the-new-keyword/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/21",
-            "title":"geojsonlint",
-            "keywords":["GeoJson", "geojsonlint"],
-            "description":"Great way to check the validity of your geojson file and get a visual",
-            "url":"http://geojsonlint.com/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/21",
-            "title":"GeoJson.io",
-            "keywords":["GeoJson"],
-            "description":"I use this on a daily bases! such an amazing tool for making geojson data and exporting it in to multiple geospatial data types",
-            "url":"http://geojson.io/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/21",
-            "title":"Ionic - Plugins",
-            "keywords":["PhoneGap", "Ionicframework", "Plugins"],
-            "description":"It's all well and good to have a 'PhoneGap' app but it's nothing but a browser, but adding plugins you can gain access to the camera, GPS, and local files",
-            "url":"http://plugins.cordova.io/#/",
-            "author":"pw"
-          },
-          {
-            "date": "2014/10/20",
-            "title":"Swift for iOS and OS X Apps",
+            "date": "2014/10/20", 
+            "title":"Swift for iOS and OS X Apps", 
             "keywords":["iOS"],
-            "description":"Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C",
+            "description":"Swift is a new programming language for iOS and OS X apps that builds on the best of C and Objective-C", 
             "url":"https://developer.apple.com/swift/",
-            "author":"bmw"
+            "author":"bw"
           },
           {
-            "date": "2014/10/19",
-            "title":"Ionicframework - Cordova (aka PhoneGap)",
+            "date": "2014/10/19", 
+            "title":"Ionicframework - Cordova (aka PhoneGap)", 
             "keywords":["Ionicframework", "PhoneGap", "Cordova", "Android", "iOS"],
-            "description":"Just made my first Android app with this and it worked like a charm!",
+            "description":"Just made my first Android app with this and it worked like a charm!", 
             "url":"http://ionicframework.com/",
             "author":"pw"
           },
           {
-            "date": "2014/10/17",
-            "title":"Introducing the Mapbox Surface API",
+            "date": "2014/10/17", 
+            "title":"Introducing the Mapbox Surface API", 
             "keywords":["Mapbox"],
-            "description":"This new feature from Mapbox looks pretty cool. I can totally see a use with app that you want to see elevation profiles like marathon races or just to use to find the lowest elevation profiles, or heighest, while biking",
+            "description":"This new feature from Mapbox looks pretty cool. I can totally see a use with app that you want to see elevation profiles like marathon races or just to use to find the lowest elevation profiles, or heighest, while biking", 
             "url":"https://www.mapbox.com/blog/introducing-the-surface-api/",
             "author":"pw"
           },
           {
-            "date": "2014/10/17",
-            "title":"Connecting to a databases using Object-Relational Mapping and NodeJS",
+            "date": "2014/10/17", 
+            "title":"Connecting to a databases using Object-Relational Mapping and NodeJS", 
             "keywords":["Database Connection", "ORM", "Tut", "NodeJS", "ExpressJS"],
-            "description":"Tutorial on how to connect to multiple types of databases using ORM and NodeJS/ExpressJS app",
+            "description":"Tutorial on how to connect to multiple types of databases using ORM and NodeJS/ExpressJS app", 
             "url":"http://www.sitepoint.com/getting-started-bookshelf-js/",
             "author":"pw"
           },
           {
-            "date": "2014/10/17",
-            "title":"Connecting to a MongoDB via NodeJS",
+            "date": "2014/10/17", 
+            "title":"Connecting to a MongoDB via NodeJS", 
             "keywords":["MongoDB", "NodeJS", "Video Tut"],
-            "description":"Great tutorial on how to connect to a mongoDB database with NodeJS and Mongojs dependencies",
+            "description":"Great tutorial on how to connect to a mongoDB database with NodeJS and Mongojs dependencies", 
             "url":"https://www.youtube.com/watch?v=j0mUoe8eghc&feature=youtu.be&noredirect=1",
             "author":"pw"
           },
           {
-            "date": "2014/10/17",
-            "title":"Prototypes in JavaScript",
+            "date": "2014/10/17", 
+            "title":"Prototypes in JavaScript", 
             "keywords":["JavaScript"],
-            "description":"When you define a function within JavaScript, it comes with a few pre-defined properties; one of these is the illusive prototype. This article details what it is, and why you should use it in your projects",
+            "description":"When you define a function within JavaScript, it comes with a few pre-defined properties; one of these is the illusive prototype. This article details what it is, and why you should use it in your projects", 
             "url":"http://code.tutsplus.com/tutorials/prototypes-in-javascript--net-24949",
             "author":"pw"
           },
           {
-            "date": "2014/10/17",
-            "title":"Sizeup for Mac OSX",
+            "date": "2014/10/17", 
+            "title":"Sizeup for Mac OSX", 
             "keywords":["Utility", "Mac"],
-            "description":"SizeUp allows you to quickly resize and position your windows with keyboard shortcuts or a handy menu bar icon. I could not function without this little tool",
+            "description":"SizeUp allows you to quickly resize and position your windows with keyboard shortcuts or a handy menu bar icon. I could not function without this little tool", 
             "url":"http://www.irradiatedsoftware.com/sizeup/",
-            "author":"bmw"
+            "author":"bw"
           },
           {
-            "date": "2014/10/17",
-            "title":"Password Manager for Mac OSX/IOS",
+            "date": "2014/10/17", 
+            "title":"Password Manager for Mac OSX/IOS", 
             "keywords":["Password", "Utility", "Mac"],
-            "description":"I can not recomend any tool more that this one. This tool has saved my life so many times. If your not using dashline to manage all you website passowrds then your doing it wrong...",
+            "description":"I can not recomend any tool more that this one. This tool has saved my life so many times. If your not using dashline to manage all you website passowrds then your doing it wrong...", 
             "url":"https://www.dashlane.com/",
-            "author":"bmw"
+            "author":"bw"
           },
           {
-            "date": "2014/10/16",
-            "title":"AngularJS Best Practices: Directory Structure",
+            "date": "2014/10/16", 
+            "title":"AngularJS Best Practices: Directory Structure", 
             "keywords":["AngularJS", "Best Practices"],
-            "description":"As your projects get bigger Directory Structure is important. After playing around with AngularJS app with others it's far more maintainable to go against the Standard Structure and move towards modularized into very specific functions",
+            "description":"As your projects get bigger Directory Structure is important. After playing around with AngularJS app with others it's far more maintainable to go against the Standard Structure and move towards modularized into very specific functions", 
             "url":"http://scotch.io/tutorials/javascript/angularjs-best-practices-directory-structure",
             "author":"pw"
           },
           {
-            "date": "2014/10/16",
-            "title":"Sublime Themes",
+            "date": "2014/10/16", 
+            "title":"Sublime Themes", 
             "keywords":["Sublime Text", "Themes"],
-            "description":"Here's a link to a bunch of really cool themes for your Sublime Text Editor",
+            "description":"Here's a link to a bunch of really cool themes for your Sublime Text Editor", 
             "url":"http://scotch.io/bar-talk/the-best-sublime-text-3-themes-of-2014",
             "author":"pw"
           },
           {
-            "date": "2014/10/16",
-            "title":"AngularJS Book of Best Practices",
+            "date": "2014/10/16", 
+            "title":"AngularJS Book of Best Practices", 
             "keywords":["AngularJS", "Book"],
-            "description":"Looks like a very promissing book of best practices with AngularJS",
+            "description":"Looks like a very promissing book of best practices with AngularJS", 
             "url":"https://www.ng-book.com/",
             "author":"pw"
           },
           {
-            "date": "2014/10/15",
-            "title":"NPM - Bcryptjs",
+            "date": "2014/10/15", 
+            "title":"NPM - Bcryptjs", 
             "keywords":["Bcrypt", "npm"],
-            "description":"Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'. And examples of how to use it!",
+            "description":"Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'. And examples of how to use it!", 
             "url":"https://www.npmjs.org/package/bcryptjs",
             "author":"pw"
           },
           {
-            "date": "2014/10/15",
-            "title":"Password Authentication with Mongoose - Bcrypt",
+            "date": "2014/10/15", 
+            "title":"Password Authentication with Mongoose - Bcrypt", 
             "keywords":["Mongodb", "Mongoose", "Bcrypt", "Password Authentication"],
-            "description":"Great tutorial on how to one-way encrypt passwords in a MongoDB database using node.bcrypt.js.",
+            "description":"Great tutorial on how to one-way encrypt passwords in a MongoDB database using node.bcrypt.js.", 
             "url":"http://devsmash.com/blog/password-authentication-with-mongoose-and-bcrypt",
             "author":"pw"
           },
           {
-            "date": "2014/10/15",
-            "title":"JSON Editor",
+            "date": "2014/10/15", 
+            "title":"JSON Editor", 
             "keywords":["json", "Playground"],
-            "description":"This is a fabulous tool to mess around with json. The editor will warn you when your json is invalid and you can minify json or show json in a easier viewing style",
+            "description":"This is a fabulous tool to mess around with json. The editor will warn you when your json is invalid and you can minify json or show json in a easier viewing style", 
             "url":"http://www.jsoneditoronline.org/",
             "author":"pw"
           },
           {
-            "date": "2014/10/14",
-            "title":"Sass Playgound - Sassmeister",
+            "date": "2014/10/14", 
+            "title":"Sass Playgound - Sassmeister", 
             "keywords":["Sass", "Playground"],
-            "description":"Sassmeister is a great place to mess around with sass and learn in the process",
+            "description":"Sassmeister is a great place to mess around with sass and learn in the process", 
             "url":"http://sassmeister.com/",
             "author":"pw"
           },
           {
-            "date": "2014/10/14",
-            "title":"Learn some Sass Today!!",
+            "date": "2014/10/14", 
+            "title":"Learn some Sass Today!!", 
             "keywords":["Sass", "Tutorial"],
-            "description":"Scotch.io has a tone of really awesome tutorials and here is yet another one! Learn some Sass and maybe learn something new if you already know Sass",
+            "description":"Scotch.io has a tone of really awesome tutorials and here is yet another one! Learn some Sass and maybe learn something new if you already know Sass", 
             "url":"http://scotch.io/tutorials/css/getting-started-with-sass",
             "author":"pw"
           },
           {
-            "date": "2014/10/14",
-            "title":"Announcing Urban Layers",
+            "date": "2014/10/14", 
+            "title":"Announcing Urban Layers", 
             "keywords":["deom"],
-            "description":"An excellent example implementation of custom vector tiles taking advantage of client side map styling, vector.pbf & d3.js. This project also features a great project overview blog",
+            "description":"An excellent example implementation of custom vector tiles taking advantage of client side map styling, vector.pbf & d3.js. This project also features a great project overview blog", 
             "url":"http://morphocode.com/making-urban-layers/",
-            "author":"bmw"
+            "author":"bw"
           },
           {
-            "date": "2014/10/14",
-            "title":"Airpair and learning/teaching resources",
+            "date": "2014/10/14", 
+            "title":"Airpair and learning/teaching resources", 
             "keywords":["Learning, Teaching"],
-            "description":"Over 80+ expert panels, workshops and talks by leaders of software",
+            "description":"Over 80+ expert panels, workshops and talks by leaders of software", 
             "url":"https://www.airpair.com",
-            "author":"bmw"
+            "author":"bw"
           },
           {
-            "date": "2014/10/14",
-            "title":"Taking a look at FireBase",
+            "date": "2014/10/14", 
+            "title":"Taking a look at FireBase", 
             "keywords":["Backend"],
-            "description":"A powerful API to store and sync data in realtime. Why consider it: with Firebase to create three-way synchronization between Firebase and your application’s View and Model, proprietary 'scaleable' business model ~ start with free hackers account, pay when you grow. Oh, and almost forgot, to mention 'angularfire'",
+            "description":"A powerful API to store and sync data in realtime. Why consider it: with Firebase to create three-way synchronization between Firebase and your application’s View and Model, proprietary 'scaleable' business model ~ start with free hackers account, pay when you grow. Oh, and almost forgot, to mention 'angularfire'", 
             "url":"https://www.firebase.com/",
-            "author":"bmw"
+            "author":"bw"
           },
           {
-            "date": "2014/10/13",
-            "title":"PostGIS, Creating Overlays",
+            "date": "2014/10/13", 
+            "title":"PostGIS, Creating Overlays", 
             "keywords":["PostGIS"],
-            "description":"Here is an example of working with PostGIS",
+            "description":"Here is an example of working with PostGIS", 
             "url":"http://boundlessgeo.com/2014/10/postgis-training-creating-overlays/",
             "author":"pw"
           },
           {
-            "date": "2014/10/12",
-            "title":"PostGIS, Training",
+            "date": "2014/10/12", 
+            "title":"PostGIS, Training", 
             "keywords":["PostGIS"],
-            "description":"Want some training in PostGIS?? Here's a cheap workshop",
+            "description":"Want some training in PostGIS?? Here's a cheap workshop", 
             "url":"http://boundless.talentlms.com/catalog/info/id:117",
             "author":"pw"
           }
@@ -719,11 +218,11 @@ p, a{
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController" style="background-color:black;">
+<body ng-controller="mainController">
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main" class="hero-unit">
-      <h2>The nerdXchange</h2>
+      <h2>The starting ground of the nerdXchange</h2>
     </div>
 
 
@@ -741,19 +240,10 @@ p, a{
 
 
 
-
+    
     <div class="footer" style="text-align: center;">
-      <span class="glyphicon glyphicon-flash"></span>
+      <p><span class="glyphicon glyphicon-flash"></span></p>
     </div>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-56169820-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
  </body>
  </html>
