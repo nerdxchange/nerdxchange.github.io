@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-<!-- define angular app -->
 <html ng-app="myAppNameSpace">
 <head>
 
@@ -16,7 +14,7 @@ body {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  padding: 1px;
+  padding: 0px;
   font-family: 'Raleway', cursive;
   font-weight: 300;
   position: relative;
@@ -44,15 +42,19 @@ body:before {
   margin-bottom:30px;
   background: black;
   display: block;
+  width: 100%;
   padding: 20px;
   text-decoration: none;
   letter-spacing: 30px;
   color: white;
+  position:fixed;
 }
 p, a{
   text-transform: none;
 }
-
+#panelSection{
+  padding-top: 150px;
+}
 
 
 /********************************************/
@@ -1033,7 +1035,7 @@ p, a{
 
 
 
-    <div class="container">
+    <div id="panelSection" class="container">
           <div class="panel panel-default" ng-repeat="link in radLinks">
               <div class="panel-body">
                 <h3>{{link.title}}</h3>
