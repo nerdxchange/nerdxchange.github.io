@@ -55,6 +55,7 @@ p, a{
 }
 #panelSection{
   padding-top: 150px;
+  min-height:750px;
 }
 .searchDiv{
   padding-left:10px;
@@ -2071,13 +2072,18 @@ p, a{
 
 
     <div id="panelSection" class="container">
-          <div class="panel panel-default" ng-repeat="link in radLinks | filter:search:strict">
+          <div class="panel panel-default" ng-repeat="link in filteredLinks = (radLinks | filter:search:strict)">
               <div class="panel-body">
                 <h3>{{link.title}}</h3>
                 <p>{{link.date}}</p>
                 <p>{{link.description}}</p>
                <a ng-href="{{link.url}}" target="_blank"> {{link.url}}</a>
               </div>
+          </div>
+          <div class="panel panel-default" ng-hide="filteredLinks.length">
+            <div class="panel-body">
+              <h3>Nothing found, try again!</h3>
+            </div>
           </div>
     </div>
 
