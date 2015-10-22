@@ -1,94 +1,86 @@
 <!DOCTYPE html>
-<html ng-app="myAppNameSpace">
+<html ng-app="myAppNameSpace" lang="en">
 <head>
-
-  <style media="screen">
-html{
-    background-color: #333;
-}
-
-p{
-  text-align: left;
-}
-
-body {
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  padding-top: 45px;
-  font-family: 'Raleway', cursive;
-  font-weight: 300;
-  position: relative;
-  background: -webkit-linear-gradient(left, #171616, #868686, #171616);
-  background: -moz-linear-gradient(left, #171616, #868686, #171616);
-  background: -ms-linear-gradient(left, #171616, #868686, #171616);
-  background: -o-linear-gradient(left, #171616, #868686, #171616);
-}
-body:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -50px;
-  width: 600px;
-  margin-left: -300px;
-  margin-top: -220px;
-  height: 600px;
-  background: -webkit-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  background: -moz-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  background: -ms-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  background: -o-radial-gradient(50% 50%, ellipse closest-side, #444, black);
-  z-index: -1;
-}
-#main {
-  margin-bottom:30px;
-  background: black;
-  display: block;
-  width: 100%;
-  padding: 20px;
-  text-decoration: none;
-  letter-spacing: 30px;
-  color: white;
-  position:fixed;
-}
-p, a{
-  text-transform: none;
-}
-#panelSection{
-  padding-top: 150px;
-  min-height:750px;
-}
-.searchDiv{
-  padding-left:10px;
-  padding-right:10px;
-}
-
-
-/********************************************/
-/*************** Media Queries **************/
-/********************************************/
-@media screen and (max-width: 600px) {
-    #main {
-      text-decoration: none;
-      letter-spacing: 20px;
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      text-transform: uppercase;
+      text-align: center;
+      font-family: 'Raleway', cursive;
+      font-weight: 300;
+      padding-top: 50px;
+      background: -webkit-linear-gradient(left, #171616, #868686, #171616);
+      background: -moz-linear-gradient(left, #171616, #868686, #171616);
+      background: -ms-linear-gradient(left, #171616, #868686, #171616);
+      background: -o-linear-gradient(left, #171616, #868686, #171616);
     }
-}
-@media screen and (max-width: 450px) {
-    #main {
-      text-decoration: none;
-      letter-spacing: 10px;
+    .panel-body > a {
+      white-space: nowrap;
     }
-}
-@media screen and (max-width: 350px) {
-    #main {
-      text-decoration: none;
-      letter-spacing: 0px;
+    .no-overflow {
+      overflow-y: hidden;
     }
-}
+    .pad15left {
+      padding-left: 15px;
+    }
+    #main {
+      display: block;
+      position: fixed;
+      background-color: black;
+      width: 100%;
+      z-index: 10;
+      color: #eee;
+      padding-bottom: 35px;
+      background-color:black;
+    }
+    .radlinks {
+      margin-top: 120px;
+    }
+    p, a {
+      text-transform: none;
+      text-align: left;
+    }
+    /********************************************/
+    /*************** Media Queries **************/
+    /********************************************/
+    /* Extra Small Devices, .visible-xs-* */
+    @media (max-width: 767px) {
+      .radlinks {
+        margin-top: 110px;
+      }
+      #main {
+        text-decoration: none;
+        letter-spacing: 4px;
+        font-size: small;
+      }
+      #main > h2 {
+        font-size: 25px;
+      }
+    }
+
+    /* Small Devices, .visible-sm-* */
+    @media (min-width: 768px) and (max-width: 991px) {}
+
+    /* Medium Devices, .visible-md-* */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      #main {
+        text-decoration: none;
+        letter-spacing: 25px;
+      }
+    }
+
+    /* Large Devices, .visible-lg-* */
+    @media (min-width: 1200px) {
+      #main {
+        text-decoration: none;
+        letter-spacing: 25px;
+      }
+    }
   </style>
-
-
   <!-- load bootstrap and fontawesome via CDN -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
   <!-- load angular via CDN -->
@@ -1893,7 +1885,7 @@ p, a{
             "title":"Java​Script & Node​JS Snippets for Sublime Text",
             "keywords":["JavaScript", "Utility"],
             "description":"JavaScript & NodeJS Snippets for Sublime Text 2/3",
-            "url":"https://sublime.wbond.net/packages/JavaScript%20%26%20NodeJS%20Snippets",
+            "url":"https://github.com/zenorocha/sublime-javascript-snippets",
             "author":"bmw"
           },
           {
@@ -2134,37 +2126,45 @@ p, a{
 <body ng-controller="mainController" style="background-color:black;">
 
   <!-- WE NEED SOME SEARCH -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;">
-      <div class="searchDiv">
-        <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search" ng-model="search.title">
-          </div>
-        </form>
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;">
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <div class="col-md-4 col-xs-12">
+          <input type="text" class="form-control" placeholder="Search" ng-model="search.title">
+        </div>
       </div>
-    </nav>
+    </form>
+  </nav>
 
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main" class="hero-unit">
+    <div id="main" class="pad15left">
       <h2>The nerdXchange</h2>
     </div>
 
-
-
-    <div id="panelSection" class="container">
-          <div class="panel panel-default" ng-repeat="link in filteredLinks = (radLinks | filter:search:strict)">
-              <div class="panel-body">
-                <h3>{{link.title}}</h3>
-                <p>{{link.date}}</p>
-                <p>{{link.description}}</p>
-               <a ng-href="{{link.url}}" target="_blank"> {{link.url}}</a>
-              </div>
-          </div>
-          <div class="panel panel-default" ng-hide="filteredLinks.length">
-            <div class="panel-body">
-              <h3>Nothing found, try again!</h3>
+    <div class="radlinks">
+      <div class="row pad15left" ng-repeat="link in filteredLinks = (radLinks | filter:search:strict)">
+        <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-body no-overflow">
+              <h3>{{link.title}}</h3>
+              <small><p>{{link.date}}</p></small>
+              <p>{{link.description}}</p>
+              <a ng-href="{{link.url}}" target="_blank"> {{link.url}}</a>
             </div>
           </div>
+        </div>
+      </div>
+      <div ng-hide="filteredLinks.length">
+        <div class="row pad15left">
+          <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h3>Nothing found, try again!</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
